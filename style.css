@@ -53,6 +53,12 @@ h1 {
  
 }
 
+#github-icon {
+text-align:center ;
+margin-left:300px;
+color:grey
+}
+
 .weather-app {
   /*  background-image: url(http://speckyboy.com/wp-content/uploads/2019/04/world-map-template-01.jpg); */
   background: linear-gradient(
