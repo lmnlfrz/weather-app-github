@@ -62,8 +62,9 @@ h1 {
 }
 
 #github-icon {
+display: block;
 text-align:center ;
-margin-left:300px;
+margin:auto;
 color:grey
 }
 
