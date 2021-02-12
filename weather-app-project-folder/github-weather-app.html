@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="weather app 4 feb.css" rel="stylesheet" />
+    <link
+    
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body >
+    <div class="container">
+      
+      
+      <div class="weather-app" id="backImage">
+        
+        
+        
+        <form class="search-form" id="search-form">
+          
+           <span>
+              <input
+                type="search"
+                placeholder= "  Type city"
+                autocomplete="off"
+                ;
+                autofocus="on"
+                ;
+                id="city-input"
+                
+              />
+            
+            
+              <input
+                type="submit"
+                value="Search"
+                id="btn"
+              /><button id="btnLocation">Current Location</button></span>
+            
+          
+        </form>
+        <span id="cityspan"><h1 id="city">City</h1> </span><span id="countryspan"><h1 id="country">Country </h1></span>
+      </br>
+        <ul>
+          <li id="date"></li>
+        </br>
+          
+        </ul>
+
+        <div class="row">
+          <div class="col-6">
+            <img
+              
+              class="weathericon"
+            />
+<p id="description"></p>
+            <span id="degree" class="temperature"> </span>
+            <span class="units">
+              <a href="#" class="celcius">°C</a> |
+              <a href="#" class="fahrenheit">°F</a>
+            </span>
+            <p class="feelslike">Feels like: <span class="feels"> </span></p>
+          </div>
+          
+            
+              <!--  <li>Precipitation: <span id="prec"></span>%</li> -->
+
+              <span class="humidp"> Humidity:  <span id="humid"> </span> % </span>
+
+              <span class="windp"> Wind:   <span id="wind"></span> Km/h </span>
+            
+          
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+    <script>
+      function formatDate(date) {
+        let hours = currentTime.getHours();
+        if (hours < 10) {
+          hours = `0${hours}`;
+        }
+
+        let minutes = currentTime.getMinutes();
+        if (minutes < 10) {
+          minutes = `0${minutes}`;
+        }
+        let dayIndex = currentTime.getDay();
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        let year = currentTime.getFullYear();
+        let daydate = currentTime.getDate();
+        let months = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "June",
+          "July",
+          "Aug",
+          "Oct",
+          "Nov",
+          "Dec",
+        ];
+        let monthIndex = currentTime.getMonth();
+
+        let day = days[dayIndex];
+        let month = months[monthIndex];
+
+        return `${day} ${daydate} ${month} ${year} ${hours}:${minutes}`;
+      }
+
+          
+      function displayWeather(response) {
+       // console.log(response.data);
+        document.querySelector("#city").innerHTML = response.data.name;
+        document.querySelector("#country").innerHTML = response.data.sys.country;
+        document.querySelector("#degree").innerHTML = Math.round(response.data.main.temp);
+        document.querySelector("#humid").innerHTML =response.data.main.humidity;
+        document.querySelector(".feels").innerHTML = Math.round(response.data.main.feels_like);
+        document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+        document.querySelector("#description").innerHTML = response.data.weather[0].description;
+      }
+     
+function searchLocation(position){
+let apiKey ="5e495a0f30ae782754537f5c56c584c1";
+ let apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayWeather);
+
+}
+
+      function getCurrentLocation(event){
+      event.preventDefault();
+      navigator.geolocation.getCurrentPosition(searchLocation);
+      }
+
+
+      let currentLocationBtn = document.querySelector("#btnLocation");
+      currentLocationBtn.addEventListener("click",getCurrentLocation);
+
+      function search(cityname){
+       let apiKey = "5e495a0f30ae782754537f5c56c584c1";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayWeather);
+
+      }
+
+     
+       function showCity(event) {
+        event.preventDefault();
+       let cityname = document.querySelector("#city-input").value;
+         search(cityname);
+      }
+
+      let searchForm = document.querySelector("#search-form");
+      searchForm.addEventListener("submit",showCity );
+
+ 
+     
+
+
+
+
+      let dateElement = document.querySelector("#date");
+      let currentTime = new Date();
+      dateElement.innerHTML = formatDate(currentTime);
+
+  
+search("Istanbul");
+
+
+      function convertFah(event) {
+        event.preventDefault();
+        let tempElement = document.querySelector("#degree");
+        let temperature = tempElement.innerHTML;
+        temperature = Number(temperature);
+        tempElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+      }
+
+      function convertCel(event) {
+        event.preventDefault();
+        let tempElement = document.querySelector("#degree");
+        let temperature = tempElement.innerHTML;
+        temperature = Number(temperature);
+        tempElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+      }
+
+      let fahTemp = document.querySelector(".fahrenheit");
+      fahTemp.addEventListener("click", convertFah);
+
+      let celTemp = document.querySelector(".celcius");
+      celTemp.addEventListener("click", convertCel);
+    </script>
+  </body>
+</html>
