@@ -53,6 +53,14 @@ h1 {
  
 }
 
+#footer{
+  font-family: "Orbitron", sans-serif;
+  color: rgb(135, 135, 135);
+  font-size:12px;
+  margin-left:10px;
+  text-align:center ;
+}
+
 #github-icon {
 text-align:center ;
 margin-left:300px;
