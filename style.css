@@ -1,5 +1,5 @@
-/* Media Queries: Tablet Landscape */
-@media screen and (max-width: 1060px) {
+ /* Media Queries: Tablet Landscape */
+ @media screen and (max-width: 1060px) {
     #primary { width:67%; }
     #secondary { width:30%; margin-left:3%;}  
 }
@@ -9,7 +9,7 @@
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
 }
-
+    
 
 body {
   box-sizing: border-box;
@@ -50,21 +50,13 @@ h1 {
   margin-left: 2px;
   text-align: center;
 }
-
-#date {
-
-  
-  font-weight: bolder;
-  font-family: "Orbitron", sans-serif;
-  color: rgb(135, 135, 135);
-  font-size: 16px;
-  font-weight: 100;
-  height: 18px;
-  line-height: 1;
-  list-style: none;
-  padding: 55px;
- 
+#github-icon {
+  display: block;
+text-align:center ;
+margin:auto;
+color:grey
 }
+
 
 #footer{
   font-family: "Orbitron", sans-serif;
@@ -73,12 +65,18 @@ h1 {
   margin-left:10px;
   text-align:center ;
 }
-
-#github-icon {
-display: block;
-text-align:center ;
-margin:auto;
-color:grey
+#date {
+  
+ 
+  font-family: "Orbitron", sans-serif;
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  height: 18px;
+  line-height: 1;
+  list-style: none;
+ 
+  padding:55px;
 }
 
 .weather-app {
@@ -87,7 +85,7 @@ color:grey
       rgba(255, 255, 255, 0.88),
       rgba(255, 255, 255, 0.88)
     ),
-    url("motherboard-world-map.jpg");
+    url("jpegs/world/motherboard-world-map.jpg");
 
   /*  background-attachment: fixed;
  background-position: center; */
@@ -96,8 +94,8 @@ color:grey
   padding-bottom: 65px;
   margin: 20px auto;
   border-radius: 10px;
-  max-width: 737px;
-  min-width: 630px;
+ /*  max-width: 737px;
+  min-width: 630px; */
   height: auto;
 }
 
@@ -143,7 +141,7 @@ color:grey
   color: rgb(135, 135, 135);
   font-weight: bolder;
   font-family: "Orbitron", sans-serif;
-   margin-left: -10px;
+  margin-left: -10px;
 }
 
 #description {
