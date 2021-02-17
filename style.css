@@ -1,15 +1,37 @@
-/* @media (min-width:375px) and (max-width:812px){
-  body{
-    width:100%;
-  }
+ @media (min-width:275px) and (max-height:812px){
+  #btnLocation {
+ 
+  
+  width:max-content;
+  border-radius: 10px;
+  color: rgb(135, 135, 135);
+  font-family: "Orbitron", sans-serif;
+   position: relative;
+   
+      border: solid 1px grey;
+}
+
+/* @media (min-width:200px) and (max-height:650px){
+  #btnLocation {
+  margin-top: 7px;
+  float: right;
+  width:auto;
+  border-radius: 10px;
+  color: rgb(135, 135, 135);
+  font-family: "Orbitron", sans-serif;
+   position: relative;
+   top:-7px;
+   border: solid 1px grey;
 } */
+ 
 
 body {
   box-sizing: border-box;
-
-  width: 80%;
-  max-width: 756px;
-  /*  min-width:380px ; */
+  
+   width: 81%; 
+  max-width: 770px;
+/*   min-width: 100vmin; */
+ /*  min-width:380px ; */
   height: 60%;
   font-family: "Orbitron", sans-serif;
 
@@ -17,6 +39,7 @@ body {
 
   top: 0;
   left: 19%;
+  right:10%
   /*  margin-top: 30px; /* this is half the height of your div*/
   /* margin-left: 30px; */ /*this is half of width of your div*/
 }
@@ -27,7 +50,9 @@ body {
   
  */
 
-.weather-app {
+
+ .weather-app {
+  
   /*  background-image: url(http://speckyboy.com/wp-content/uploads/2019/04/world-map-template-01.jpg); */
   background: linear-gradient(
       rgba(255, 255, 255, 0.88),
@@ -45,7 +70,7 @@ body {
   /*  max-width: 737px;
   min-width: 630px; */
   height: auto;
-  width: 100%;
+  width:100%;
 }
 .col-6 {
   margin-left: 60px;
@@ -90,9 +115,12 @@ h1 {
   height: 18px;
   line-height: 1;
   list-style: none;
-  width: 100%;
+width:100%;
   padding-left: 55px;
 }
+
+
+
 
 .text {
   color: #fff;
@@ -185,26 +213,29 @@ h1 {
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-  position: relative;
+   position: relative;
 }
 #btnLocation:hover {
   transform: scale(1.1);
 }
 
 #btnLocation {
-  margin-top: 7px;
+  margin-top: 15px;
   float: right;
+  top:-7px;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-  position: relative;
+   position: relative;
+   
+   border: solid 1px grey;
 }
-#footer {
-  margin-bottom: 0;
-  padding: 0;
+#footer{
+  margin-bottom:0;
+  padding:0;
 }
-#githubicon {
-  margin-top: 1px;
-
-  padding: 0;
+#githubicon{
+  margin-top:1px;
+  
+  padding:0;
 }
