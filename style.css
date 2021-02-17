@@ -1,25 +1,23 @@
- /* Media Queries: Tablet Landscape */
- @media screen and (max-width: 1060px) {
-    #primary { width:67%; }
-    #secondary { width:30%; margin-left:3%;}  
-}
-
-/* Media Queries: Tablet Portrait */
-@media screen and (max-width: 768px) {
-    #primary { width:100%; }
-    #secondary { width:100%; margin:0; border:none; }
-}
-    
+/* @media (min-width:375px) and (max-width:812px){
+  body{
+    width:100%;
+  }
+} */
+ 
 
 body {
   box-sizing: border-box;
-  width: 70%;
-  height: 70%;
+  
+   width: 80%; 
+  max-width: 756px;
+ /*  min-width:380px ; */
+  height: 60%;
   font-family: "Orbitron", sans-serif;
 
-  position: absolute;
+  position: relative;
+
   top: 0;
-  left: 20%;
+  left: 19%;
   /*  margin-top: 30px; /* this is half the height of your div*/
   /* margin-left: 30px; */ /*this is half of width of your div*/
 }
@@ -29,6 +27,29 @@ body {
    object-fit: contain;
   
  */
+
+
+ .weather-app {
+  
+  /*  background-image: url(http://speckyboy.com/wp-content/uploads/2019/04/world-map-template-01.jpg); */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    url("jpegs/world/motherboard-world-map.jpg");
+
+  /*  background-attachment: fixed;
+ background-position: center; */
+  background-repeat: no-repeat;
+  border: 1px solid #dadde1;
+  padding-bottom: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  /*  max-width: 737px;
+  min-width: 630px; */
+  height: auto;
+  width:100%;
+}
 .col-6 {
   margin-left: 60px;
 }
@@ -42,7 +63,7 @@ h1 {
 #city {
   font-size: 38px;
   margin-left: 0px;
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: center;
   font-family: "Orbitron", sans-serif;
 }
@@ -52,22 +73,19 @@ h1 {
 }
 #github-icon {
   display: block;
-text-align:center ;
-margin:auto;
-color:grey
+  text-align: center;
+  margin: auto;
+  color: grey;
 }
 
-
-#footer{
+#footer {
   font-family: "Orbitron", sans-serif;
   color: rgb(135, 135, 135);
-  font-size:12px;
-  margin-left:10px;
-  text-align:center ;
+  font-size: 12px;
+  margin-left: 10px;
+  text-align: center;
 }
 #date {
-  
- 
   font-family: "Orbitron", sans-serif;
   color: rgb(135, 135, 135);
   font-size: 16px;
@@ -75,29 +93,12 @@ color:grey
   height: 18px;
   line-height: 1;
   list-style: none;
- 
-  padding:55px;
+width:100%;
+  padding-left: 55px;
 }
 
-.weather-app {
-  /*  background-image: url(http://speckyboy.com/wp-content/uploads/2019/04/world-map-template-01.jpg); */
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.88),
-      rgba(255, 255, 255, 0.88)
-    ),
-    url("motherboard-world-map.jpg");
 
-  /*  background-attachment: fixed;
- background-position: center; */
-  background-repeat: no-repeat;
-  border: 1px solid #dadde1;
-  padding-bottom: 65px;
-  margin: 20px auto;
-  border-radius: 10px;
- /*  max-width: 737px;
-  min-width: 630px; */
-  height: auto;
-}
+
 
 .text {
   color: #fff;
@@ -165,7 +166,6 @@ color:grey
   font-family: "Orbitron", sans-serif;
 }
 
-
 #cityspan {
   width: 50px;
 }
@@ -191,12 +191,26 @@ color:grey
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
+   position: relative;
+}
+#btnLocation:hover {
+  transform: scale(1.1);
 }
 
 #btnLocation {
-  margin-top: 13px;
+  margin-top: 7px;
   float: right;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
+   position: relative;
+}
+#footer{
+  margin-bottom:0;
+  padding:0;
+}
+#githubicon{
+  margin-top:1px;
+  
+  padding:0;
 }
