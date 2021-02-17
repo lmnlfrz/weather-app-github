@@ -3,14 +3,13 @@
     width:100%;
   }
 } */
- 
 
 body {
   box-sizing: border-box;
-  
-   width: 80%; 
+
+  width: 80%;
   max-width: 756px;
- /*  min-width:380px ; */
+  /*  min-width:380px ; */
   height: 60%;
   font-family: "Orbitron", sans-serif;
 
@@ -28,15 +27,13 @@ body {
   
  */
 
-
- .weather-app {
-  
+.weather-app {
   /*  background-image: url(http://speckyboy.com/wp-content/uploads/2019/04/world-map-template-01.jpg); */
   background: linear-gradient(
       rgba(255, 255, 255, 0.88),
       rgba(255, 255, 255, 0.88)
     ),
-    url("jpegs/world/motherboard-world-map.jpg");
+    url("motherboard-world-map.jpg");
 
   /*  background-attachment: fixed;
  background-position: center; */
@@ -48,7 +45,7 @@ body {
   /*  max-width: 737px;
   min-width: 630px; */
   height: auto;
-  width:100%;
+  width: 100%;
 }
 .col-6 {
   margin-left: 60px;
@@ -93,12 +90,9 @@ h1 {
   height: 18px;
   line-height: 1;
   list-style: none;
-width:100%;
+  width: 100%;
   padding-left: 55px;
 }
-
-
-
 
 .text {
   color: #fff;
@@ -191,7 +185,7 @@ width:100%;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-   position: relative;
+  position: relative;
 }
 #btnLocation:hover {
   transform: scale(1.1);
@@ -203,14 +197,14 @@ width:100%;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-   position: relative;
+  position: relative;
 }
-#footer{
-  margin-bottom:0;
-  padding:0;
+#footer {
+  margin-bottom: 0;
+  padding: 0;
 }
-#githubicon{
-  margin-top:1px;
-  
-  padding:0;
+#githubicon {
+  margin-top: 1px;
+
+  padding: 0;
 }
