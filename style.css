@@ -214,6 +214,7 @@ width:100%;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
    position: relative;
+    margin-top:9px;
 }
 #btnLocation:hover {
   transform: scale(1.1);
