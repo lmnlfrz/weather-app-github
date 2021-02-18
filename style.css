@@ -1,14 +1,12 @@
- @media (min-width:275px) and (max-height:812px){
+ @media (min-width:250px) and (max-height:812px){
   #btnLocation {
- 
-  
-  width:max-content;
+    width:max-content;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
    position: relative;
   float: left;
-  left:-1px;
+  left:-43px;
    border: solid 1px grey;
 }
 
