@@ -2,25 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
-    <link href="style.css" rel="stylesheet" />
-    <link
+    <link href="weather-app-updated.css" rel="stylesheet" />
     
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
+ <script  src="https://kit.fontawesome.com/d6598a8df7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://kit.fontawesome.com/d6598a8df7.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
   </head>
   <body >
-
     <div class="container">
       
       
@@ -54,21 +52,22 @@
         <span id="cityspan"><h1 id="city">City</h1> </span><span id="countryspan"><h1 id="country">Country </h1></span>
       </br>
         
-          <span id="date"></span>
+          <div id="date"></div>
         </br>
           
-      
+        
 
         <div class="row">
-          <div class="col-6">
-            <img
+          <div class="col-6 weather-temp">
+           
+            <!-- <img src="http://openweathermap.org/img/wn/10n@2x.png" 
               
               class="weathericon"
-            />
-<p id="description"> </p>
+            /> -->
+<p id="description"></p>
             <span id="degree" class="temperature"> </span>
             <span class="units">
-              <a href="#" class="celcius">°C</a> |
+              <a href="#" class="celcius active">°C</a> |
               <a href="#" class="fahrenheit">°F</a>
             </span>
             <p class="feelslike">Feels like: <span class="feels"> </span></p>
@@ -80,18 +79,22 @@
               <span class="humidp"> Humidity:  <span id="humid"> </span> % </span>
 
               <span class="windp"> Wind:   <span id="wind"></span> Km/h </span>
-            </br>
-                 
-              <span> <a id="github-icon" href="https://github.com/lmnlfrz/weather-app-github" target="_blank"> <i  class="fab fa-github"></i> </a> </span>
-    </br>
         </br>
-              <p id=footer>Coded by Asli Guresci Onder</p>
+           <span id="githubicon"> <a id="github-icon" href="https://github.com/lmnlfrz/weather-app-github" target="_blank"> <i  class="fab fa-github"></i> </a> </span>
+        </br>
+        </br>
+
+           <p id=footer>Coded by Asli Guresci Onder</p>
         </div>
+        
       </div>
+      
           </div>
+         
         </div>
+      
       </div>
-    
+      
   </div>
 
     <script>
@@ -130,9 +133,11 @@
         return `${day} ${daydate} ${month} ${year} ${hours}:${minutes}`;
       }
 
-          
+          /* let iconElement = document.querySelector(".weathericon"); */
+         
       function displayWeather(response) {
-       // console.log(response.data);
+       
+        let temperatureElement=document.querySelector(".temperature")
         document.querySelector("#city").innerHTML = response.data.name;
         document.querySelector("#country").innerHTML = response.data.sys.country;
         document.querySelector("#degree").innerHTML = Math.round(response.data.main.temp);
@@ -140,7 +145,11 @@
         document.querySelector(".feels").innerHTML = Math.round(response.data.main.feels_like);
         document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
         document.querySelector("#description").innerHTML = response.data.weather[0].description;
-      }
+     /*  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) */
+     
+    celciusTemperature= response.data.main.temp;
+    temperatureElement.innerHTML=Math.round(celciusTemperature);
+    }
      
 function searchLocation(position){
 let apiKey ="5e495a0f30ae782754537f5c56c584c1";
@@ -187,30 +196,40 @@ axios.get(apiUrl).then(displayWeather);
 
   
 search("Istanbul");
-
+     
 
       function convertFah(event) {
         event.preventDefault();
-        let tempElement = document.querySelector("#degree");
-        let temperature = tempElement.innerHTML;
-        temperature = Number(temperature);
-        tempElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+         let temperatureElement = document.querySelector(".temperature");
+       celTemp.classList.remove("active");
+       fahTemp.classList.add("active");
+       
+       let fahTemperature=(celciusTemperature*9)/5+32;
+       /*  temperature = Number(temperature); */
+        temperatureElement.innerHTML = Math.round(fahTemperature);
+         
       }
 
       function convertCel(event) {
         event.preventDefault();
-        let tempElement = document.querySelector("#degree");
-        let temperature = tempElement.innerHTML;
-        temperature = Number(temperature);
-        tempElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+          celTemp.classList.add("active");
+       fahTemp.classList.remove("active");
+        let temperatureElement = document.querySelector(".temperature");
+        
+        /* temperature = Number(temperature); */
+        temperatureElement.innerHTML =Math.round(celciusTemperature);
       }
+      let celciusTemperature=null;
 
       let fahTemp = document.querySelector(".fahrenheit");
       fahTemp.addEventListener("click", convertFah);
 
       let celTemp = document.querySelector(".celcius");
       celTemp.addEventListener("click", convertCel);
-   
-   </script>
+    </script>
   </body>
 </html>
+
+
+
+
