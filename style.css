@@ -9,10 +9,10 @@
    
   left:-3px;
    border: solid 1px grey;
+
 }
-
-
-
+  
+  }}
 
 
 /* @media (min-width:200px) and (max-height:650px){
@@ -43,7 +43,7 @@ body {
   position: relative;
 
   top: 0;
-  left: 9%;
+  left: 19%;
   right:10%
   /*  margin-top: 30px; /* this is half the height of your div*/
   /* margin-left: 30px; */ /*this is half of width of your div*/
@@ -63,7 +63,7 @@ body {
       rgba(255, 255, 255, 0.88),
       rgba(255, 255, 255, 0.88)
     ),
-    url("jpegs/world/motherboard-world-map.jpg");
+    url("motherboard-world-map.jpg");
 
   /*  background-attachment: fixed;
  background-position: center; */
