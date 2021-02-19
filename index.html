@@ -83,7 +83,7 @@
 
               <span class="windp"> Wind:   <span id="wind"></span> Km/h </span>
         <div id="nextdays" >Next  3 days</div>
-              <div class="row weather-forecast">
+              <div class="row weather-forecast" id="forecast">
             <div class="col-2">
               <h3>
                 Sun
@@ -177,7 +177,34 @@
         return `${day} ${daydate} ${month} ${year} ${hours}:${minutes}`;
       }
 
-          /* let iconElement = document.querySelector(".weathericon"); */
+      function formatNextDays(nextdayname){
+        let date= new Date(nextdayname)
+        let dayIndex = date.getDay();
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        
+        let daydate = date.getDate();
+        let months = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "June",
+          "July",
+          "Aug",
+          "Oct",
+          "Nov",
+          "Dec",
+        ];
+        let monthIndex = date.getMonth();
+
+        let day = days[dayIndex];
+        let month = months[monthIndex];
+
+        
+        return `${day} ${daydate} ${month}`;
+      }
+        
          
       function displayWeather(response) {
        
@@ -202,14 +229,6 @@ axios.get(apiUrl).then(displayWeather);
 
 }
 
-
-let apiKey = "49ee1090c643b10cfd307f59e8ba79e7";
-let apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}";
-
-console.log(apiUrl);
-
-
-
       function getCurrentLocation(event){
       event.preventDefault();
       navigator.geolocation.getCurrentPosition(searchLocation);
@@ -218,11 +237,60 @@ console.log(apiUrl);
 
       let currentLocationBtn = document.querySelector("#btnLocation");
       currentLocationBtn.addEventListener("click",getCurrentLocation);
+      
+      function displayForecast(response){
+        let forecastElement=document.querySelector("#forecast");
+        let forecast = response.data.list[5];
+        console.log(forecast);
+
+        forecastElement.innerHTML=
+        `<div class="col-2">
+              <h5>
+                ${formatNextDays(forecast.dt_txt)}
+              </h5>
+              
+              <div class="weather-forecast-temperature">
+                <strong>Max:${Math.round(forecast.main.temp_max)}°</strong> Min:${Math.round(forecast.main.temp_min)}°
+              </div>
+            </div>`;
+          
+
+
+          forecast = response.data.list[13];
+          forecastElement.innerHTML+=
+        `<div class="col-2">
+              <h5>
+                ${formatNextDays(forecast.dt_txt)}
+              </h5>
+              
+              <div class="weather-forecast-temperature">
+                <strong>Max:${Math.round(forecast.main.temp_max)}°</strong> Min:${Math.round(forecast.main.temp_min)}°
+              </div>
+            </div>`;
+          
+               forecast = response.data.list[21];
+          forecastElement.innerHTML+=
+        `<div class="col-2">
+              <h5>
+                ${formatNextDays(forecast.dt_txt)}
+              </h5>
+              
+              <div class="weather-forecast-temperature">
+                <strong>Max:${Math.round(forecast.main.temp_max)}°</strong> Min:${Math.round(forecast.main.temp_min)}°
+              </div>
+            </div>`;
+          
+          }
+
+
 
       function search(cityname){
        let apiKey = "5e495a0f30ae782754537f5c56c584c1";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(displayWeather);
+
+        apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${cityname}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayForecast);
 
       }
 
