@@ -14,17 +14,31 @@
  }
 
  @media screen and (max-width: 934px) {
-    .row .weather-forecast {
+    .col-2{
         display: none !important;
     }
-}
-
- @media screen and (max-width: 934px) {
+    .row #githubicon{
+  margin-top:160px;
+      }
   .weather-app {
   position: relative;
    left:-37px;
-  
     }
+
+.row #footer{
+  position: relative;
+  bottom:-10px;
+    
+}
+.row .humidp{
+  position: relative;
+  top:-20px;
+}
+.row .windp{
+  position: relative;
+  top:-20px;
+}
+
 }
 
 /*  @media (min-width: 375px){ 
@@ -136,6 +150,13 @@ h1 {
   margin: auto;
   color: grey;
 }
+#githubicon{
+  margin-top:12px;
+  height:30px;
+  padding:0;
+  position:relative;
+  right:250px;
+}
 
 #footer {
   font-family: "Orbitron", sans-serif;
@@ -143,7 +164,12 @@ h1 {
   font-size: 12px;
   margin-left: 10px;
   text-align: center;
+  margin-bottom:0;
+  padding:0;
+  position:relative;
+  right:250px;
 }
+
 #date {
   font-family: "Orbitron", sans-serif;
   color: rgb(135, 135, 135);
@@ -155,8 +181,6 @@ h1 {
 width:100%;
   padding-left: 55px;
 }
-
-
 
 
 .text {
@@ -267,19 +291,7 @@ width:100%;
    position: relative;
       border: solid 1px grey;
 }
-#footer{
-  margin-bottom:0;
-  padding:0;
-  position:relative;
-  right:250px;
-}
-#githubicon{
-  margin-top:12px;
-  height:30px;
-  padding:0;
-  position:relative;
-  right:250px;
-}
+
 .weather-temp .active{
   color: rgb(135, 135, 135);
   cursor: default;
