@@ -82,7 +82,8 @@
               <span class="humidp"> Humidity:  <span id="humid"> </span> % </span>
 
               <span class="windp"> Wind:   <span id="wind"></span> Km/h </span>
-         <div class="row weather-forecast">
+        <div id="nextdays" >Next  3 days</div>
+              <div class="row weather-forecast">
             <div class="col-2">
               <h3>
                 Sun
@@ -200,6 +201,14 @@ let apiKey ="5e495a0f30ae782754537f5c56c584c1";
 axios.get(apiUrl).then(displayWeather);
 
 }
+
+
+let apiKey = "49ee1090c643b10cfd307f59e8ba79e7";
+let apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}";
+
+console.log(apiUrl);
+
+
 
       function getCurrentLocation(event){
       event.preventDefault();

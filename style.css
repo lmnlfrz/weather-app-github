@@ -312,3 +312,15 @@ width:100%;
 .weather-app.row{
    overflow:hidden;
 }
+
+#nextdays{
+  position:relative;
+  left:370px;
+  top:-160px;
+  color: rgb(135, 135, 135);
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  background-color:rgba(135, 135, 135,0.3);
+  width:fit-content;
+  border-radius: 10px;
+}
