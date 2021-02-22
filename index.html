@@ -13,340 +13,78 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
- <script  src="https://kit.fontawesome.com/d6598a8df7.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script  src="https://kit.fontawesome.com/d6598a8df7.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <title>Document</title>
-  </head>
-  <body >
-    <div class="container">
-      
-      
-      <div class="weather-app" id="backImage">
-        
-        
-        
-        <form class="search-form" id="search-form">
-          
-           <span>
-              <input
-                type="search"
-                placeholder= "  Type city"
-                autocomplete="off"
-                ;
-                autofocus="on"
-                ;
-                id="city-input"
-                
-              />
-            
-            
-              <input
-                type="submit"
-                value="Search"
-                id="btn"
-              /><button id="btnLocation">Current Location</button></span>
-            
-          
-        </form>
-        <span id="cityspan"><h1 id="city">City</h1> </span><span id="countryspan"><h1 id="country">Country </h1></span>
-      </br>
-        
-          <div id="date"></div>
-        </br>
-          
-        
 
-        <div class="row">
-          <div class="col-6 weather-temp">
-           
-            <!-- <img src="http://openweathermap.org/img/wn/10n@2x.png" 
-              
-              class="weathericon"
-            /> -->
-         
+<title>How is the weather today?</title>
+</head>
+<body >
+<div class="container">
+<div class="weather-app" id="backImage">
+<form class="search-form" id="search-form">
+<span>
+<input type="search" placeholder= "  Type city" autocomplete="off"; autofocus="on"; id="city-input"/>
+<input type="submit" value="Search" id="btn"/>
+<button id="btnLocation">Current Location</button>
+</span>
+</form>
+<span id="cityspan"><h1 id="city">City</h1> </span><span id="countryspan"><h1 id="country">Country </h1></span>
+</br>
+<div id="date"></div>
+</br>
+<div class="row">
+<div class="col-6 weather-temp">
+<img src="" class="weathericon"/> 
 <p id="description"></p>
-            <span id="degree" class="temperature"> </span>
-            <span class="units">
-              <a href="#" class="celcius active">°C</a> |
-              <a href="#" class="fahrenheit">°F</a>
-            </span>
-            <p class="feelslike">Feels like: <span class="feels"> </span></p>
-          </div>
 
-           
-          
-            
-              <!--  <li>Precipitation: <span id="prec"></span>%</li> -->
-
-              <span class="humidp"> Humidity:  <span id="humid"> </span> % </span>
-
-              <span class="windp"> Wind:   <span id="wind"></span> Km/h </span>
-        <div id="nextdays" >Next  3 days</div>
-              <div class="row weather-forecast" id="forecast">
-            <div class="col-2">
-              <h3>
-                Sun
-              </h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>
-                Mon
-              </h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>
-                Tue
-              </h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-                alt=""
-              />
-               <div class="weather-forecast-temperature">
-              <strong>22°</strong> 17°
-              </div>
-            </div>
-      
-            </br>
-           <span id="githubicon"> <a id="github-icon" href="https://github.com/lmnlfrz/weather-app-github" target="_blank"> <i  class="fab fa-github"></i> </a> </span>
-        </br>
-        </br>
-
-        
-
-           <p id=footer>Coded by Asli Guresci Onder</p>
-        </div>
-        
-      </div>
-      
-          </div>
-         
-        </div>
-      
-      </div>
-      
+<span id="degree" class="temperature"> </span>
+<span class="units">
+<a href="#" class="celcius active">°C |</a> 
+<a href="#" class="fahrenheit">°F</a>
+</span>
+<img src="" alt="" id="mainicon"/>
+<p class="feelslike">Feels like: <span class="feels"> </span></p>
+</div>
+<span class="humidp"> Humidity:  <span id="humid"> </span> % </span>
+<span class="windp"> Wind:   <span id="wind"></span> Km/h </span>
+<div id="nextdays" >Next  3 days</div>
+<div class="row weather-forecast" id="forecast">
+<div class="col-2">
+<h3> Sun</h3>
+ <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"/>
+<div class="weather-forecast-temperature">
+<strong>22°</strong> 17°
+</div>
+</div>
+<div class="col-2">
+<h3> Mon</h3>
+<img
+src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"/> 
+<div class="weather-forecast-temperature">
+<strong>22°</strong> 17°
+</div>
+</div>
+<div class="col-2">
+<h3>Tue</h3>
+<img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png" /> 
+<div class="weather-forecast-temperature">
+<strong>22°</strong> 17°
+</div>
+</div>
+</br>
+</br>
+</br>
+</div>
+</div>
+<span id="githubicon"> <a id="github-icon" href="https://github.com/lmnlfrz/weather-app-github" target="_blank"> <i  class="fab fa-github"></i> </a> </span>
+<p id=footer>Coded by Asli Guresci Onder</p>
+</div>
+ </div>
   </div>
+   </div>
 
-    <script>
-      function formatDate(date) {
-        let hours = currentTime.getHours();
-        if (hours < 10) {
-          hours = `0${hours}`;
-        }
-
-        let minutes = currentTime.getMinutes();
-        if (minutes < 10) {
-          minutes = `0${minutes}`;
-        }
-        let dayIndex = currentTime.getDay();
-        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        let year = currentTime.getFullYear();
-        let daydate = currentTime.getDate();
-        let months = [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "June",
-          "July",
-          "Aug",
-          "Oct",
-          "Nov",
-          "Dec",
-        ];
-        let monthIndex = currentTime.getMonth();
-
-        let day = days[dayIndex];
-        let month = months[monthIndex];
-
-        return `${day} ${daydate} ${month} ${year} ${hours}:${minutes}`;
-      }
-
-      function formatNextDays(nextdayname){
-        let date= new Date(nextdayname)
-        let dayIndex = date.getDay();
-        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        
-        let daydate = date.getDate();
-        let months = [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "June",
-          "July",
-          "Aug",
-          "Oct",
-          "Nov",
-          "Dec",
-        ];
-        let monthIndex = date.getMonth();
-
-        let day = days[dayIndex];
-        let month = months[monthIndex];
-
-        
-        return `${day} ${daydate} ${month}`;
-      }
-        
-         
-      function displayWeather(response) {
-       
-        let temperatureElement=document.querySelector(".temperature")
-        document.querySelector("#city").innerHTML = response.data.name;
-        document.querySelector("#country").innerHTML = response.data.sys.country;
-        document.querySelector("#degree").innerHTML = Math.round(response.data.main.temp);
-        document.querySelector("#humid").innerHTML =response.data.main.humidity;
-        document.querySelector(".feels").innerHTML = Math.round(response.data.main.feels_like);
-        document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
-        document.querySelector("#description").innerHTML = response.data.weather[0].description;
-     /*  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) */
-     
-    celciusTemperature= response.data.main.temp;
-    temperatureElement.innerHTML=Math.round(celciusTemperature);
-    }
-     
-function searchLocation(position){
-let apiKey ="5e495a0f30ae782754537f5c56c584c1";
- let apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayWeather);
-
-}
-
-      function getCurrentLocation(event){
-      event.preventDefault();
-      navigator.geolocation.getCurrentPosition(searchLocation);
-      }
-
-
-      let currentLocationBtn = document.querySelector("#btnLocation");
-      currentLocationBtn.addEventListener("click",getCurrentLocation);
-      
-      function displayForecast(response){
-        let forecastElement=document.querySelector("#forecast");
-        let forecast = response.data.list[5];
-        console.log(forecast);
-
-        forecastElement.innerHTML=
-        `<div class="col-2">
-              <h5>
-                ${formatNextDays(forecast.dt_txt)}
-              </h5>
-              
-              <div class="weather-forecast-temperature">
-                <strong>Max:${Math.round(forecast.main.temp_max)}°</strong> Min:${Math.round(forecast.main.temp_min)}°
-              </div>
-            </div>`;
-          
-
-
-          forecast = response.data.list[13];
-          forecastElement.innerHTML+=
-        `<div class="col-2">
-              <h5>
-                ${formatNextDays(forecast.dt_txt)}
-              </h5>
-              
-              <div class="weather-forecast-temperature">
-                <strong>Max:${Math.round(forecast.main.temp_max)}°</strong> Min:${Math.round(forecast.main.temp_min)}°
-              </div>
-            </div>`;
-          
-               forecast = response.data.list[21];
-          forecastElement.innerHTML+=
-        `<div class="col-2">
-              <h5>
-                ${formatNextDays(forecast.dt_txt)}
-              </h5>
-              
-              <div class="weather-forecast-temperature">
-                <strong>Max:${Math.round(forecast.main.temp_max)}°</strong> Min:${Math.round(forecast.main.temp_min)}°
-              </div>
-            </div>`;
-          
-          }
-
-
-
-      function search(cityname){
-       let apiKey = "5e495a0f30ae782754537f5c56c584c1";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(displayWeather);
-
-        apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${cityname}&appid=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(displayForecast);
-
-      }
-
-     
-       function showCity(event) {
-        event.preventDefault();
-       let cityname = document.querySelector("#city-input").value;
-         search(cityname);
-      }
-
-      let searchForm = document.querySelector("#search-form");
-      searchForm.addEventListener("submit",showCity );
-
- 
-     
-
-
-
-
-      let dateElement = document.querySelector("#date");
-      let currentTime = new Date();
-      dateElement.innerHTML = formatDate(currentTime);
-
-  
-search("Istanbul");
-     
-
-      function convertFah(event) {
-        event.preventDefault();
-         let temperatureElement = document.querySelector(".temperature");
-       celTemp.classList.remove("active");
-       fahTemp.classList.add("active");
-       
-       let fahTemperature=(celciusTemperature*9)/5+32;
-       /*  temperature = Number(temperature); */
-        temperatureElement.innerHTML = Math.round(fahTemperature);
-         
-      }
-
-      function convertCel(event) {
-        event.preventDefault();
-          celTemp.classList.add("active");
-       fahTemp.classList.remove("active");
-        let temperatureElement = document.querySelector(".temperature");
-        
-        /* temperature = Number(temperature); */
-        temperatureElement.innerHTML =Math.round(celciusTemperature);
-      }
-      let celciusTemperature=null;
-
-      let fahTemp = document.querySelector(".fahrenheit");
-      fahTemp.addEventListener("click", convertFah);
-
-      let celTemp = document.querySelector(".celcius");
-      celTemp.addEventListener("click", convertCel);
-    </script>
+<script src="app.js" ></script>
   </body>
 </html>
 

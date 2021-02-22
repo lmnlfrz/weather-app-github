@@ -1,130 +1,78 @@
- @media (min-width:250px) and (max-height:823px){
-  #btnLocation{
-   
-  width:max-content;
-  border-radius: 10px;
-  color: rgb(135, 135, 135);
-  font-family: "Orbitron", sans-serif;
-   position: relative;
-   
-  left:-3px;
-   border: solid 1px grey;
-
-  }
- }
-
- @media screen and (max-width: 934px) {
-    .col-2{
-        display: none !important;
-    }
-    .row #githubicon{
-  margin-top:160px;
-      }
-  .weather-app {
-  position: relative;
-   left:-37px;
-    }
-
-.row #footer{
-  position: relative;
-  bottom:-10px;
-    
-}
-.row .humidp{
-  position: relative;
-  top:-20px;
-}
-.row .windp{
-  position: relative;
-  top:-20px;
-}
-
-}
-
-/*  @media (min-width: 375px){ 
-  .row .weather-forecast{
-    display:none;
-  }
-}  */ 
- /* @media screen and (max-width: 1080px){ 
-  .row .weather-forecast{
-    display:none;
-  }
-}   */
-
-/* @media (min-width:200px) and (max-height:650px){
+@media (min-width: 250px) and (max-height: 823px) {
   #btnLocation {
-  margin-top: 7px;
-  float: right;
-  width:auto;
-  border-radius: 10px;
-  color: rgb(135, 135, 135);
-  font-family: "Orbitron", sans-serif;
-   position: relative;
-   top:-7px;
-   border: solid 1px grey;
-} */
- 
-.container{
-  padding:0;
+    width: max-content;
+    border-radius: 10px;
+    color: rgb(135, 135, 135);
+    font-family: "Orbitron", sans-serif;
+    position: relative;
+    left: -3px;
+    border: solid 1px grey;
+  }
 }
-.container .weather-app{
-   overflow:hidden;
-   
+
+@media screen and (max-width: 934px) {
+  .col-2 {
+    display: none !important;
+  }
+  .row #githubicon {
+    margin-top: 160px;
+  }
+  .weather-app {
+    position: relative;
+    left: -37px;
+  }
+
+  .row #footer {
+    position: relative;
+    bottom: -10px;
+  }
+  .row .humidp {
+    position: relative;
+    top: -20px;
+  }
+  .row .windp {
+    position: relative;
+    top: -20px;
+  }
+}
+
+.container {
+  padding: 0;
+}
+.container .weather-app {
+  overflow: hidden;
 }
 body {
   box-sizing: border-box;
-  
-   width: 80%; 
-   
+  width: 80%;
   max-width: 760px;
-/*   min-width: 100vmin; */
- /*  min-width:380px ; */
   height: 60%;
   font-family: "Orbitron", sans-serif;
-  
-
   position: relative;
-
-  top: 25px;
+  top: 20px;
   left: 23%;
-  right:10%
-  /*  margin-top: 30px; /* this is half the height of your div*/
-  /* margin-left: 30px; */ /*this is half of width of your div*/
+  right: 10%;
+
 }
 
-/* .background {
- 
-   object-fit: contain;
-  
- */
 
-
- .weather-app {
+.weather-app {
   
-  /*  background-image: url(http://speckyboy.com/wp-content/uploads/2019/04/world-map-template-01.jpg); */
   background: linear-gradient(
       rgba(255, 255, 255, 0.88),
       rgba(255, 255, 255, 0.88)
     ),
     url("motherboard-world-map.jpg");
 
-  /*  background-attachment: fixed;
- background-position: center; */
   background-repeat: no-repeat;
   border: 1px solid #dadde1;
   padding-bottom: 15px;
   border-radius: 10px;
-  /*  max-width: 737px;
-  min-width: 630px; */
   height: auto;
-  width:100%;
+  width: 100%;
 }
 .col-6 {
   margin-left: 60px;
- 
-  
- 
 }
 h1 {
   color: rgb(135, 135, 135);
@@ -150,38 +98,18 @@ h1 {
   margin: auto;
   color: grey;
 }
-#githubicon{
-  margin-top:12px;
-  height:30px;
-  padding:0;
-  position:relative;
-  right:250px;
-}
-
-#footer {
-  font-family: "Orbitron", sans-serif;
-  color: rgb(135, 135, 135);
-  font-size: 12px;
-  margin-left: 10px;
-  text-align: center;
-  margin-bottom:0;
-  padding:0;
-  position:relative;
-  right:250px;
-}
 
 #date {
   font-family: "Orbitron", sans-serif;
   color: rgb(135, 135, 135);
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 800;
   height: 18px;
   line-height: 1;
   list-style: none;
-width:100%;
+  width: 100%;
   padding-left: 55px;
 }
-
 
 .text {
   color: #fff;
@@ -200,6 +128,8 @@ width:100%;
   font-weight: 400;
   line-height: ️1;
   font-family: "Orbitron", sans-serif;
+  position: relative;
+  top: 20px;
 }
 .units {
   position: relative;
@@ -215,6 +145,8 @@ width:100%;
   font-weight: bolder;
   font-family: "Orbitron", sans-serif;
   color: rgb(133, 122, 122);
+  position: relative;
+  top: 20px;
 }
 
 .feels {
@@ -226,6 +158,8 @@ width:100%;
   font-weight: bolder;
   font-family: "Orbitron", sans-serif;
   margin-left: -10px;
+  position: relative;
+  top: 17px;
 }
 
 #description {
@@ -240,6 +174,8 @@ width:100%;
   font-weight: bolder;
   margin-left: 50px;
   font-family: "Orbitron", sans-serif;
+  position: relative;
+  top: 9px;
 }
 
 .windp {
@@ -247,6 +183,8 @@ width:100%;
   margin-left: 50px;
   font-weight: bolder;
   font-family: "Orbitron", sans-serif;
+  position: relative;
+  top: 9px;
 }
 
 #cityspan {
@@ -274,8 +212,8 @@ width:100%;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-   position: relative;
-   margin-top:9px;
+  position: relative;
+  margin-top: 9px;
 }
 #btnLocation:hover {
   transform: scale(1.1);
@@ -283,44 +221,54 @@ width:100%;
 
 #btnLocation {
   margin-top: 15px;
-  float:right;
-  top:-7px;
+  float: right;
+  top: -7px;
   border-radius: 10px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-   position: relative;
-      border: solid 1px grey;
+  position: relative;
+  border: solid 1px grey;
 }
 
-.weather-temp .active{
+.weather-temp .active {
   color: rgb(135, 135, 135);
   cursor: default;
 }
-.weather-temp .active:hover{
+.weather-temp .active:hover {
   text-decoration: none;
 }
 
-.row.weather-forecast{
-  position:relative;
-  left:270px;
-  margin-top:-150px;
+.row.weather-forecast {
+  position: relative;
+  left: 290px;
+  margin-top: -170px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
-  
-  
 }
-.weather-app.row{
-   overflow:hidden;
-}
-
-#nextdays{
-  position:relative;
-  left:370px;
-  top:-160px;
+#nextdays {
+  position: relative;
+  left: 370px;
+  top: -180px;
   color: rgb(135, 135, 135);
   font-family: "Orbitron", sans-serif;
   font-weight: bold;
-  background-color:rgba(135, 135, 135,0.3);
-  width:fit-content;
+  background-color: rgba(135, 135, 135, 0.3);
+  width: fit-content;
   border-radius: 10px;
+}
+.weather-app.row {
+  overflow: hidden;
+}
+
+#footer {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(135, 135, 135);
+  font-size: 12px;
+  text-align: center;
+}
+
+#mainicon {
+  position: relative;
+  top: -55px;
+  left: -110px;
 }
