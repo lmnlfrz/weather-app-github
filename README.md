@@ -1,6 +1,8 @@
 # weather-app-github
 Here is my very first project ;
 
+https://www.shecodes.io/workshops/shecodes-plus-49-0/projects/253973
+
 SheCodes Plus Final Project 
 
 Basic weather app built with:
