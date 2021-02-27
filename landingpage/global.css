@@ -1,0 +1,63 @@
+.text-center {
+  text-align: center;
+}
+.heading-small {
+  font-size: 1.25rem;
+}
+.heading-medium {
+  font-size: 1.5rem;
+}
+.heading-large {
+  font-size: 1.75rem;
+}
+
+.bg-yellow-space {
+  background-color: #ffc900;
+}
+.c-yellow {
+  color: #ffc900;
+}
+
+.bg-yellow-dark {
+  background-color: #ffc8009a;
+}
+
+.bg-yellow-light {
+  background-color: #fddd67;
+}
+.bg-black {
+  background-color: rgb(46, 42, 42);
+}
+.c-black {
+  color: rgb(46, 42, 42);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.container2 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.btn-block {
+  width: 100%;
+  background-color: chartreuse;
+}
+
+/* forms */
+
+.form-group {
+  padding: 1rem 0;
+}
+.form-group label {
+  display: block;
+}
+.form-control {
+  width: 100%;
+  resize: none;
+}
+button {
+  width: 100%;
+}
